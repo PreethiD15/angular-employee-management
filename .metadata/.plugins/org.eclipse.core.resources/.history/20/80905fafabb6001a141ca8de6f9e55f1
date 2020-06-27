@@ -1,0 +1,14 @@
+package com.mindtree.employee.management.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.stereotype.Repository;
+import com.mindtree.employee.management.entity.Employee;
+/**
+ * @author m1053638
+ *
+ */
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee,Integer > {
+
+}

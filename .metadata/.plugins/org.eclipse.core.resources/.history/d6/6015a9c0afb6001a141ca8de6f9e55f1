@@ -1,0 +1,31 @@
+package com.mindtree.EmployeeManagement.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mindtree.EmployeeManagement.entity.Employee;
+import com.mindtree.EmployeeManagement.service.EmployeeService;
+@RequestMapping("employee")
+@Controller
+public class EmployeeController {
+
+	@Autowired
+	EmployeeService employeeService;
+	
+	@RequestMapping("allemployee")
+	public List<Employee> getAllEmployees() {
+		List<Employee> employeelist = new ArrayList<>();
+		employeelist = employeeService.getAllEmployeeFromDb();
+		return employeelist;
+
+	}
+	public String createEmployee(Employee employee)
+	{
+		String message = employeeService.addEmployeeToDb(employee);
+		return message;
+	}
+}

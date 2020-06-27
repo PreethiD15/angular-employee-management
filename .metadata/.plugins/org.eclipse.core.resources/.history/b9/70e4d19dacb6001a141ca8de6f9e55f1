@@ -1,0 +1,5 @@
+package com.mindtree.EmployeeManagement.service.impl;
+@Service
+public class EmployeeServiceImpl {
+
+}
