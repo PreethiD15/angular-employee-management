@@ -21,7 +21,7 @@ public class EmployeeController {
 
 	@Autowired
 	EmployeeService employeeService;
-	//find all employee
+	
 	@GetMapping("allEmployee")
 	public List<Employee> getAllEmployees() {
 		List<Employee> employeelist = new ArrayList<>();
@@ -29,7 +29,7 @@ public class EmployeeController {
 		return employeelist;
 
 	}
-	//get all employee
+	
 	@RequestMapping("addEmployee")
 	public String createEmployee(@RequestBody Employee employee)
 	{

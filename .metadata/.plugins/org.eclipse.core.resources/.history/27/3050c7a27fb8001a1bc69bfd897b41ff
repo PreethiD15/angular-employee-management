@@ -29,7 +29,7 @@ public class EmployeeController {
 		return employeelist;
 
 	}
-	//get all employee
+	
 	@RequestMapping("addEmployee")
 	public String createEmployee(@RequestBody Employee employee)
 	{
